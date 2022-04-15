@@ -7,14 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.google.com/specimen/Kumbh+Sans">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
+  <script src="index.js"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | E-commerce product page</title>
 </head>
 
 
@@ -32,14 +27,8 @@
     </ul>
 
     <div class="user">
-      <div class="cart">
-        <img src="./images/icon-cart.svg" alt="">
-        
-      </div>
-      
-      <div class="profile">
-        <img src="./images/image-avatar.png" alt="">
-      </div>
+      <button onclick="showItems()" class="cart"><img src="./images/icon-cart.svg"/></button>
+      <button><img class="pfp" src="./images/image-avatar.png" alt=""/></button>
     </div>
 
   </div>
@@ -48,7 +37,7 @@
 
   <div class="product">
     <div class="pics">
-      <img class="productPics" id="mainPic" src="./images/image-product-1.jpg" alt="">
+      <a href=""><img id="mainPic" src="./images/image-product-1.jpg" alt=""></a>
 
       <div class="thumbnails">
         <img class="productPics" src="./images/image-product-1-thumbnail.jpg" alt="">
@@ -75,14 +64,24 @@
       <p class="originalPrice">$250.00</p>
 
       <div class="toCart">
-        <button><img src="./images/icon-minus.svg"></button>
-        0
-        <button><img src="./images/icon-plus.svg"></button>
-        <button class="cartButton"><img src="./images/icon-cart.svg">Add to cart</button>
+        <div class="quantity">
+          <button onclick="minus()"><img src="./images/icon-minus.svg"></button>
+          <p id="counter">0</p>
+          <button onclick="plus()"><img src="./images/icon-plus.svg"></button>
+        </div>
+
+        <button class="cartButton" onclick="addToCart()"><img src="./images/icon-cart.svg"/>Add to cart</button>
       </div>
   
     </div>
  
+  </div>
+
+  <div id="cartContainer">
+      <h3>Cart</h3>
+      <hr>
+      <p class="empty">Your cart is empty.</p>
+
   </div>
 
   
