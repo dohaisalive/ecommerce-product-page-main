@@ -37,7 +37,9 @@
 
   <div class="product">
     <div class="pics">
-      <a href=""><img id="mainPic" src="./images/image-product-1.jpg" alt=""></a>
+
+      <img id="mainPic" src="./images/image-product-1.jpg" alt="">
+
 
       <div class="thumbnails">
         <img class="productPics" src="./images/image-product-1-thumbnail.jpg" alt="">
@@ -78,10 +80,21 @@
   </div>
 
   <div id="cartContainer">
-      <h3>Cart</h3>
-      <hr>
-      <p class="empty">Your cart is empty.</p>
+    <h3>Cart</h3>
+    <hr>
+    <div class="itemInCart">
+      <div id="productPic"></div>
 
+      <p id="productName">Your cart is empty.</p>
+
+      <div class="priceCalculated"></div>
+        <p id="price"></p>
+        <p id="itemQuantity"></p>
+        <h3><p id="overall"></p></h3>
+      </div>
+
+      <button class="checkOut">Checkout</button>
+    </div>
   </div>
 
   
