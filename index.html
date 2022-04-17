@@ -53,13 +53,11 @@
     <div class="user">
 
 
-      <div class="btn-group">
-        <button class="btn btn-secondary dropdown-toggle" onclick="showItems()"  type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-          <img src="./images/icon-cart.svg"/>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-          <li id="cartContainer" class="dropdown-item" style="display:none;">
-              <h3>Cart</h3>
+      <div class="dropdown">
+        <button onclick="showItems()" class="dropbtn"><img src="./images/icon-cart.svg"/></button>
+        <div id="cartContainer" class="dropdown-content">
+          
+          <h3>Cart</h3>
               <hr>
               <div class="itemInCart">
 
@@ -74,12 +72,11 @@
                 </div>
                 <button id="button1" onclick="removeItem()"><img src="./images/icon-delete.svg" alt=""/></button>
               </div>
-              <button class="checkOut" id="button2">Checkout</button> 
-          </li>
-          
-        </ul>
+              <button class="checkOut" id="button2">Checkout</button>
+        </div>
       </div>
 
+              
 
       
       <button><img class="pfp" src="./images/image-avatar.png" alt=""/></button>
@@ -170,25 +167,6 @@
       </div>
     </div>
   </div>
-
-<!--       
-  <div id="cartContainer" style="display:none;">
-    <h3>Cart</h3>
-    <hr>
-    <div class="itemInCart">
-      <div id="productPic"></div>
-      <div class="info">
-        <p id="productName">Your cart is empty.</p>
-        <div class="priceCalculated">
-          <p id="price"></p>
-          <p id="itemQuantity"></p>
-          <p id="overall"></p>
-        </div>
-      </div>
-      <button id="button1" onclick="removeItem()"><img src="./images/icon-delete.svg" alt=""/></button>
-    </div>
-    <button class="checkOut" id="button2">Checkout</button>
-  </div> -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
