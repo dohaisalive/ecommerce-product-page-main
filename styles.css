@@ -75,19 +75,9 @@ ul {
   align-items: center;
   text-align: center;
   z-index: 1000;
-/*   
-  background-color: rgb(255, 255, 255);
-  border-radius: 20px;
-  box-shadow: 1px 4px 34px 10px rgba(212,212,212,0.75);
-  -webkit-box-shadow: 1px 4px 34px 10px rgba(212,212,212,0.75);
-  -moz-box-shadow: 1px 4px 34px 10px rgba(212,212,212,0.75); */
 
 } 
 
-.dropdown-menu{
-  height: auto;
-  width: auto;
-}
 
 
 .info{
@@ -96,10 +86,6 @@ ul {
   gap: 2%
 }
 
-#defaultDropdown { 
-  background-color: white;
-  border: 0;
- }
 
 #button1{
   width: 100%;
@@ -121,10 +107,6 @@ ul {
   justify-content: center;
 }
 
-#button1{
-  padding-bottom: 2%;
-}
-
 #productName, #itemQuantity,#price{
   color: rgb(134, 134, 134);
 }
@@ -143,8 +125,6 @@ ul {
   margin: auto;
   margin-bottom: 10px;
 }
-
-
 
 .user{
   display: flex;
@@ -175,19 +155,6 @@ ul {
 
 /*only for things in laptop*/
 @media screen and (min-width: 640px){
-
-  /* .dropdown-menu{
-    position: fixed;
-    top: 10%;
-    right: 10%;
-  } */
-  
-
-  /* #cartContainer{
-    width: 25%;
-    margin-top: 7%;
-    margin-right: 16%;
-  } */
   .product {
       padding-top:6%;
       display: flex;
@@ -337,7 +304,6 @@ ul {
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
-
 /* Dropdown Button */
 .dropbtn {
   background-color: white;
@@ -350,6 +316,7 @@ ul {
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
+  float: right;
   position: relative;
   display: inline-block;
 
@@ -357,6 +324,7 @@ ul {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+  right:0;
   border-radius: 10px;
   display: none;
   position: absolute;
