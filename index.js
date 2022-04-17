@@ -1,6 +1,7 @@
 let counter = 0;
 let cart = [];
 let first = true;
+let BigN = 1;
 
 class Item {
   constructor(
@@ -57,13 +58,17 @@ function plus() {
 
 function addToCart() {
   if (counter !== 0) {
-    if (first === true) {
-      first = false;
+    if (first) {
       var img = document.createElement("img");
       img.src = sneakers.mainPic;
       var src = document.getElementById("productPic");
       src.appendChild(img);
+      first = false;
     }
+
+    document.getElementById("button1").style.display = "block";
+    document.getElementById("button2").style.display = "block";
+    document.getElementById("productPic").style.display = "block";
 
     document.getElementById("productName").innerHTML = sneakers.productName;
     document.getElementById("price").innerHTML = `$${sneakers.price}`;
@@ -74,4 +79,31 @@ function addToCart() {
   }
 }
 
-function renderCart(item) {}
+function removeItem() {
+  document.getElementById("button1").style.display = "none";
+  document.getElementById("button2").style.display = "none";
+
+  document.getElementById("productPic").style.display = "none";
+  document.getElementById("productName").innerHTML = "Your cart is empty.";
+  document.getElementById("price").innerHTML = "";
+  document.getElementById("itemQuantity").innerHTML = "";
+  document.getElementById("overall").innerHTML = "";
+}
+
+function changePic(n) {
+  BigN = n;
+  document.getElementById("mainPic").src = `./images/image-product-${n}.jpg`;
+}
+
+function currentPic() {
+  document.getElementById(
+    "picInModal"
+  ).src = `./images/image-product-${BigN}.jpg`;
+}
+
+var myModal = document.getElementById("myModal");
+var myInput = document.getElementById("myInput");
+
+myModal.addEventListener("shown.bs.modal", function () {
+  myInput.focus();
+});
